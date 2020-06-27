@@ -2,3 +2,9 @@
 SMS Gratis Berbasis Web
 
 Script SMS Gratis App ini dapat Anda gunakan untuk membuat aplikasi SMS Gratis milik Anda sendiri. Aplikasi ini berbasis website dengan bahasa pemrograman utama PHP.
+
+**Demo App**
+[DEMO](https://short4.me/SMSGratisDemo)
+
+**Instalasi**
+Untuk membuat aplikasi SMS Gratis milik Anda sendiri silahkan ikuti langkah-langkah dinawah ini :
