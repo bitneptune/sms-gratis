@@ -90,7 +90,7 @@ $max_daily_user = $get_setting['max_daily_user'];
 $max_daily_number = $get_setting['max_daily_number'];
 $status_service = $get_setting['status_service'];
 
-$url = "$api_url/api/?token=$api_key&id_user=$id_user&menu=CHECK_BALANCE";
+$url = "$api_url/api/index.php?token=$api_key&id_user=$id_user&menu=CHECK_BALANCE";
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
@@ -189,7 +189,7 @@ if ($result==1) {
 
 					<div class="wrap-input1">
 						<label><strong>SMS Footer</strong></label>
-						<input class="input1" type="text" name="footer_credit" required="" value="<?php echo "$footer_credit"; ?>">
+						<input class="input1" type="text" name="footer_credit" value="<?php echo "$footer_credit"; ?>">
 						<span class="shadow-input1"></span>
 					</div>
 

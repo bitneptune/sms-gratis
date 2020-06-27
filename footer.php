@@ -10,7 +10,7 @@
 				scale: 1.1
 			});
 
-			coreAdstriton('<?php echo "$id_pub"; ?>', 0, 0, '', '<?php echo "$popup_ad"; ?>', 0, 0, 0, 0, 0, 0, 0);
+			coreAdstriton(2, '<?php echo "$id_pub"; ?>', 0, 0, '', '<?php echo "$popup_ad"; ?>', 90, 0, 0, 0, 0, 0);
 		});
 	</script>
 	<script type="text/javascript" src="js/main.js"></script>

@@ -68,7 +68,7 @@ if (isset($_POST['send_sms'])) {
 		}
 
 		$sms = urlencode($sms);
-		$url = "$api_url/api/?token=$api_key&id_user=$id_user&menu=SEND_SMS&type=$sms_type&number=$number&text=$sms";
+		$url = "$api_url/api/index.php?token=$api_key&id_user=$id_user&menu=SEND_SMS&type=$sms_type&number=$number&text=$sms";
 
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
@@ -126,7 +126,7 @@ if (isset($_POST['send_sms'])) {
 					<br><br>
 					<?php echo "$note"; ?>
 					<br><br><br><br>
-					<a href="/"><i class="fas fa-home" style="color: blue"></i> Back to Home</a>
+					<a href="index.php"><i class="fas fa-home" style="color: blue"></i> Back to Home</a>
 					<br><br>
 				</p>
 			</div>
