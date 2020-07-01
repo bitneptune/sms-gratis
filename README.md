@@ -21,9 +21,7 @@ Untuk membuat aplikasi SMS Gratis milik Anda sendiri silahkan ikuti langkah-lang
 ###### Admin
 Untuk melakukan konfigurasi pada website silahkan akses *domainanda.com/admin.php*
 
-Username : admin
-Password : admin
-
+Username : **admin** / Password : **admin**
 
 ###### Hosting Gratis
 Jika Anda membutuhkan web hosting gratis silahkan [Daftar Disini](https://short4.me/FreeHosting)
