@@ -44,7 +44,7 @@ CREATE TABLE `setting` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 INSERT INTO `setting` (`id`, `title`, `description`, `keywords`, `api_key`, `id_user`, `sms_type`, `id_pub`, `popup_ad`, `bad_words`, `footer_credit`, `max_sms_length`, `max_daily_sms`, `max_daily_user`, `max_daily_number`, `status_service`) VALUES
-(1, 'SMS Gratis', 'Kirim SMS Gratis ke Semua Operator Indonesia', 'sms gratis, kirim sms gratis, sms gratis all operator', 'Ql8bifTmetZtWhBa9SfXTf9vRsO6XoG1wDCfTd8kOTJAjVE0ak', 501, 'REG', 227, 1, 'anjing,bangsat,babi,kontol', '', 140, 1000, 50, 10, 1);
+(1, 'SMS Gratis', 'Kirim SMS Gratis ke Semua Operator Indonesia', 'sms gratis, kirim sms gratis, sms gratis all operator', 'Ql8bifTmetZtWhBa9SfXTf9vRsO6XoG1wDCfTd8kOTJAjVE0ak', 501, 'REG', 227, 0, 'anjing,bangsat,babi,kontol', '', 140, 1000, 50, 10, 1);
 
 CREATE TABLE `sms` (
   `id` int(11) NOT NULL,
