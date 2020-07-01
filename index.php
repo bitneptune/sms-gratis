@@ -8,6 +8,7 @@ $get_setting = mysqli_fetch_array($get_setting);
 $title = $get_setting['title'];
 $description = $get_setting['description'];
 $keywords = $get_setting['keywords'];
+$id_user = $get_setting['id_user'];
 $id_pub = $get_setting['id_pub'];
 $popup_ad = $get_setting['popup_ad'];
 
