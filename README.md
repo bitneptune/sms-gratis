@@ -15,8 +15,15 @@ Untuk membuat aplikasi SMS Gratis milik Anda sendiri silahkan ikuti langkah-lang
 2. Upload file master ke web hosting / server Anda
 3. Buat database baru
 4. Import database (*/db/fs_os.sql*)
-5. Edit file *config.php*
+5. Edit file *config.php*, sesuaikan dengan database yang sudah Anda buat
 6. Selesai, silahkan akses website Anda
 
 ###### Admin
 Untuk melakukan konfigurasi pada website silahkan akses *domainanda.com/admin.php*
+
+Username : admin
+Password : admin
+
+
+###### Hosting Gratis
+Jika Anda membutuhkan web hosting gratis silahkan [Daftar Disini](https://short4.me/FreeHosting)
