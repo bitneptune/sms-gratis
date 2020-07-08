@@ -1,7 +1,7 @@
 # sms-gratis
 SMS Gratis Berbasis Web
 
-Script SMS Gratis App ini dapat Anda gunakan untuk membuat aplikasi SMS Gratis milik Anda sendiri. Aplikasi ini berbasis website dengan bahasa pemrograman utama PHP.
+Script SMS Gratis App ini dapat Anda gunakan untuk membuat aplikasi SMS Gratis milik Anda sendiri. Aplikasi ini berbasis website dengan bahasa pemrograman utama PHP. Aplikasi ini sudah terintegrasi dengan SMS Gateway dan dapat digunakan secara gratis, serta diintegrasikan dengan Adstriton Ad Network. Aplikasi ini dapat dijadikan sebagai WebView Android App dan Anda dapat menguploadnya ke Google Play.
 
 ###### Demo App
 [DEMO](https://short4.me/SMSGratisDemo)
@@ -25,3 +25,11 @@ Username : **admin** / Password : **admin**
 
 ###### Hosting Gratis
 Jika Anda membutuhkan web hosting gratis silahkan [Daftar Disini](https://short4.me/FreeHosting)
+
+###### Jasa Installasi
+Jika Anda tidak membutuhkan jasa install app ini silahkan hubungi kami via [Whatsapp](https://short4.me/l54vI). Proses cepat dan selesai tidak sampai satu hari. Jasa installasi sudah termasuk :
+- Domain 1 tahun*
+- Web Hosting 6 bulan
+- Pengajuan dedicated SMS Gateway API
+
+# Harga Layanan Installasi : Rp 190.000 via Bank Transfer atau BTC 0.0014 via Bitcoin
