@@ -27,7 +27,7 @@ Username : **admin** / Password : **admin**
 Jika Anda membutuhkan web hosting gratis silahkan [Daftar Disini](https://short4.me/FreeHosting)
 
 ###### Jasa Installasi
-Jika Anda tidak membutuhkan jasa install app ini silahkan hubungi kami via [Whatsapp](https://short4.me/l54vI). Proses cepat dan selesai tidak sampai satu hari. Jasa installasi sudah termasuk :
+Jika Anda membutuhkan jasa install app ini silahkan hubungi kami via [Whatsapp](https://short4.me/l54vI). Proses cepat dan selesai tidak sampai satu hari. Jasa installasi sudah termasuk :
 - Domain 1 tahun*
 - Web Hosting 6 bulan
 - Pengajuan dedicated SMS Gateway API
