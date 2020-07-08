@@ -60,7 +60,7 @@ if (isset($_POST['send_sms'])) {
 	$count_sms_number = mysqli_query($conn, "SELECT * FROM sms WHERE number_sms='$number' AND date_send='$date'");
 	$count_sms_number = mysqli_num_rows($count_sms_number);
 
-	if ($check_prefix==TRUE && $max_daily_sms>$count_sms && $max_daily_user>$count_sms_user && $max_daily_number>$count_sms_number && $sms_length>=10 && $sms_length<=$max_sms_length && $status_service==1) {
+	if ($check_prefix==TRUE && $max_daily_sms>$count_sms && $max_daily_user>$count_sms_user && $max_daily_number>$count_sms_number && $sms_length<=$max_sms_length && $status_service==1) {
 		$note = 'Error not defined';
 
 		if ($sms_type!='FREE') {
@@ -94,6 +94,9 @@ if (isset($_POST['send_sms'])) {
 			$status = 'SUCCESS';
 			$note = 'SMS berhasil dikirim ke nomor tujuan';
 		}
+	}
+	else {
+		$note = 'Maksimal SMS ke nomor tersebut telah tercapai atau server offline';
 	}
 }
 
