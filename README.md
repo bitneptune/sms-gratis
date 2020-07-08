@@ -32,4 +32,4 @@ Jika Anda tidak membutuhkan jasa install app ini silahkan hubungi kami via [What
 - Web Hosting 6 bulan
 - Pengajuan dedicated SMS Gateway API
 
-# Harga Layanan Installasi : Rp 190.000 via Bank Transfer atau BTC 0.0014 via Bitcoin
+###### Harga Layanan Installasi : Rp 190.000 via Bank Transfer atau BTC 0.0014 via Bitcoin
