@@ -11,7 +11,7 @@ PHP 7x (cURL enabled), MySQL 5.6+/MariaDB 10.1+
 
 ###### Instalasi
 Untuk membuat aplikasi SMS Gratis milik Anda sendiri silahkan ikuti langkah-langkah dibawah ini :
-1. Cloning / download file master (Download Master)
+1. Cloning / download file master ([Download Master](https://short4.me/CUELT))
 2. Upload file master ke web hosting / server Anda
 3. Buat database baru
 4. Import database (*/db/fs_os.sql*)
