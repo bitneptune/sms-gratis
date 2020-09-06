@@ -3,6 +3,9 @@ SMS Gratis Berbasis Web
 
 Script SMS Gratis App ini dapat Anda gunakan untuk membuat aplikasi SMS Gratis milik Anda sendiri. Aplikasi ini berbasis website dengan bahasa pemrograman utama PHP. Aplikasi ini sudah terintegrasi dengan SMS Gateway KuySMS API dan dapat digunakan secara gratis, serta diintegrasikan dengan Adstriton Ad Network. Aplikasi ini dapat dijadikan sebagai WebView Android App dan Anda dapat menguploadnya ke Google Play.
 
+###### Update Terbaru
+(6 Sept 2020) Sekarang aplikasi ini sudah diintegrasikan dengan Safelink Ad dari Adstriton.com. Dengan mengaktifkan Safelink Ad ini Anda bisa mendapatkan uang lebih banyak lagi karena Adstriton memberikan CPM yang besar untuk Safelink Ad. Untuk mengaktifkannya cukup ubah pengaturan pada Halaman Admin.
+
 ###### Demo App
 [DEMO](https://short4.me/SMSGratisDemo)
 
