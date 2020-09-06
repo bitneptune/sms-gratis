@@ -11,6 +11,13 @@ $keywords = $get_setting['keywords'];
 $id_user = $get_setting['id_user'];
 $id_pub = $get_setting['id_pub'];
 $popup_ad = $get_setting['popup_ad'];
+$safelink_ad = $get_setting['safelink_ad'];
+
+$next_page = 'result.php';
+
+if ($safelink_ad==1) {
+	$next_page = 'result2.php';
+}
 
 ?>
 
@@ -29,7 +36,7 @@ $popup_ad = $get_setting['popup_ad'];
 				<img src="images/img-01.png">
 			</div>
 
-			<form class="contact1-form" action="result.php" method="POST">
+			<form class="contact1-form" action="<?php echo "$next_page"; ?>" method="POST">
 				<span class="contact1-form-title">
 					Kirim SMS Gratis ke Semua Operator Indonesia
 				</span>

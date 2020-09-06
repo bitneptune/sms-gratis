@@ -10,7 +10,7 @@
 				scale: 1.1
 			});
 
-			coreAdstriton('<?php echo "$id_user"; ?>', '<?php echo "$id_pub"; ?>', 0, 0, '', '<?php echo "$popup_ad"; ?>', 90, 0, 0, 0, 0, 0);
+			coreAdstriton(<?php echo "$id_user"; ?>, <?php echo "$id_pub"; ?>, <?php echo "$safelink_ad"; ?>, 0, '<?php echo "$base_url_host"; ?>,bitneptune.com,adstriton.com,kuysms.me,github.com,colorlib.com', <?php echo "$popup_ad"; ?>, 30, 0, 0, 0, 0, 0);
 		});
 	</script>
 	<script type="text/javascript" src="js/main.js"></script>

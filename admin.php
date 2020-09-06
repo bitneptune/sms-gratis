@@ -9,8 +9,9 @@ $get_setting = mysqli_fetch_array($get_setting);
 
 $id_pub = $get_setting['id_pub'];
 $popup_ad = $get_setting['popup_ad'];
+$safelink_ad = $get_setting['safelink_ad'];
 
-$balance = '0';
+$balance = 0;
 $username = '';
 $password = '';
 $update_info_txt = '';
@@ -47,6 +48,7 @@ if (isset($_POST['update_info'])) {
 	$sms_type = $_POST['sms_type'];
 	$id_pub = $_POST['id_pub'];
 	$popup_ad = $_POST['popup_ad'];
+	$safelink_ad = $_POST['safelink_ad'];
 	$bad_words = $_POST['bad_words'];
 	$footer_credit = $_POST['footer_credit'];
 	$max_sms_length = $_POST['max_sms_length'];
@@ -55,7 +57,7 @@ if (isset($_POST['update_info'])) {
 	$max_daily_number = $_POST['max_daily_number'];
 	$status_service = $_POST['status_service'];
 
-	$update_info = mysqli_query($conn, "UPDATE setting SET title='$title', description='$description', keywords='$keywords', api_key='$api_key', id_user='$id_user', sms_type='$sms_type', id_pub='$id_pub', popup_ad='$popup_ad', bad_words='$bad_words', footer_credit='$footer_credit', max_sms_length='$max_sms_length', max_daily_sms='$max_daily_sms', max_daily_user='$max_daily_user', max_daily_number='$max_daily_number', status_service='$status_service'");
+	$update_info = mysqli_query($conn, "UPDATE setting SET title='$title', description='$description', keywords='$keywords', api_key='$api_key', id_user='$id_user', sms_type='$sms_type', id_pub='$id_pub', popup_ad='$popup_ad', safelink_ad='$safelink_ad', bad_words='$bad_words', footer_credit='$footer_credit', max_sms_length='$max_sms_length', max_daily_sms='$max_daily_sms', max_daily_user='$max_daily_user', max_daily_number='$max_daily_number', status_service='$status_service'");
 
 	if ($update_info) {
 		$update_info_txt = 'Pengaturan berhasil disimpan';
@@ -108,6 +110,8 @@ if ($result==1) {
 	$balance = $output['data']['balance_remaining'];
 }
 
+$balance = number_format($balance, '2', ',', '.');
+
 ?>
 
 <!DOCTYPE html>
@@ -125,7 +129,8 @@ if ($result==1) {
 						Setting
 					</span>
 					<p class="text-center"><?php echo "$update_info_txt"; ?></p><br>
-					<p>Your KuySMS Balance : Rp <?php echo "$balance"; ?></p><br>
+					<p>Saldo Anda : Rp <?php echo "$balance"; ?> | <a href="<?php echo "$source_url"; ?>/page/deposit" target="_blank">Deposit Saldo</a> | <a href="<?php echo "$source_url"; ?>/page/payout" target="_blank">Payout</a></p><br>
+					<p>Info : Khusus untuk pengguna source code ini Anda mendapatkan harga spesial untuk BULK SMS hanya Rp 35/SMS. Silahkan menghubungi pihak KuySMS melalui <a href="<?php echo "$source_url"; ?>/page/contact" target="_blank"><strong>Form Kontak</strong></a> untuk mengaktifkannya</p><br>
 
 					<div class="wrap-input1">
 						<label><strong>Web Title</strong></label>
@@ -163,7 +168,8 @@ if ($result==1) {
 						<label><strong>KuySMS SMS Type</strong></label>
 						<input class="input1" type="text" name="sms_type" required="" value="<?php echo "$sms_type"; ?>">
 						<span class="shadow-input1"></span>
-						<label><small>*OTP / REG / BULK / FREE</small></label>
+						<label><small>*OTP / REG / BULK / FREE / AUTO</small></label><br>
+						<label><small>*Disarankan untuk menggunakan AUTO, dengan type ini SMS yang dikirimkan menggunakan type FREE terlebih dahulu, jika sudah mencapai limit maka otomatis diganti ke type BULK</small></label>
 					</div>
 
 					<div class="wrap-input1">
@@ -181,6 +187,14 @@ if ($result==1) {
 					</div>
 
 					<div class="wrap-input1">
+						<label><strong>Safelink Ad</strong></label>
+						<input class="input1" type="number" name="safelink_ad" required="" value="<?php echo "$safelink_ad"; ?>">
+						<span class="shadow-input1"></span>
+						<label><small>*1 : Enable / 0 : Disable</small></label><br>
+						<label><small>*Sebelum mengirim SMS, visitor akan diarahkan ke halaman safelink yang berisi iklan terlebih dahulu. Disarankan untuk mengaktifkan iklan ini karena memiliki CPM yang besar</small></label>
+					</div>
+
+					<div class="wrap-input1">
 						<label><strong>Sensor Kata</strong></label>
 						<input class="input1" type="text" name="bad_words" required="" value="<?php echo "$bad_words"; ?>">
 						<span class="shadow-input1"></span>
@@ -191,30 +205,35 @@ if ($result==1) {
 						<label><strong>SMS Footer</strong></label>
 						<input class="input1" type="text" name="footer_credit" value="<?php echo "$footer_credit"; ?>">
 						<span class="shadow-input1"></span>
+						<label><small>*Memberi watermark pada SMS yang dikirim, ini hanya untuk type BULK dan diatasnya</small></label>
 					</div>
 
 					<div class="wrap-input1">
 						<label><strong>Max SMS Length</strong></label>
 						<input class="input1" type="number" name="max_sms_length" required="" value="<?php echo "$max_sms_length"; ?>">
 						<span class="shadow-input1"></span>
+						<label><small>*Maksimal jumlah karakter pada setiap SMS</small></label>
 					</div>
 
 					<div class="wrap-input1">
 						<label><strong>Max SMS/Day</strong></label>
 						<input class="input1" type="number" name="max_daily_sms" required="" value="<?php echo "$max_daily_sms"; ?>">
 						<span class="shadow-input1"></span>
+						<label><small>*Maksimal keseluruhan SMS yang dapat dikirim setiap harinya</small></label>
 					</div>
 
 					<div class="wrap-input1">
 						<label><strong>Max Send SMS/IP Address/Day</strong></label>
 						<input class="input1" type="number" name="max_daily_user" required="" value="<?php echo "$max_daily_user"; ?>">
 						<span class="shadow-input1"></span>
+						<label><small>*Maksimal SMS yang dapat dikirim oleh setiap visitor setiap harinya</small></label>
 					</div>
 
 					<div class="wrap-input1">
 						<label><strong>Max Send SMS/Number/Day</strong></label>
 						<input class="input1" type="number" name="max_daily_number" required="" value="<?php echo "$max_daily_number"; ?>">
 						<span class="shadow-input1"></span>
+						<label><small>*Maksimal SMS yang dapat dikirim ke satu nomor setiap harinya</small></label>
 					</div>
 
 					<div class="wrap-input1">
